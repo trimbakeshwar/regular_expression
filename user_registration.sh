@@ -39,12 +39,10 @@ else
 fi
 
 password=""
-validPassword="^[A-Z]{1,}[a-z0-9]{7,}$"
 read -p "enter password: " password
-if [[ $password =~ $validPassword ]]
+if [[ ${#password} -gt 7 && "$password" == *[A-Z]* && "$password" == *[0-9]*  ]]
 then
-   echo "valid"
+echo "valid"
 else
-   echo "invalid"
+echo "notvalid"
 fi
-
