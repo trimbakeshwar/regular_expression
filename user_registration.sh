@@ -38,3 +38,13 @@ else
    echo "invalid"
 fi
 
+password=""
+validPassword="^[A-Z]{1,}[a-z]{4,}[0-9]{2,}$"
+read -p "enter password: " password
+if [[ $password =~ $validPassword ]]
+then
+   echo "valid"
+else
+   echo "invalid"
+fi
+
