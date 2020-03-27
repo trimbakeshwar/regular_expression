@@ -39,7 +39,7 @@ else
 fi
 
 password=""
-validPassword="^[A-Z]{1,}[a-z]{4,}[0-9]{2,}$"
+validPassword="^[A-Z]{1,}[a-z0-9]{7,}$"
 read -p "enter password: " password
 if [[ $password =~ $validPassword ]]
 then
