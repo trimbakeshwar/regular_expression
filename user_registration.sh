@@ -40,7 +40,7 @@ fi
 
 password=""
 read -p "enter password: " password
-if [[ ${#password} -gt 7 && "$password" == *[A-Z]* && "$password" == *[0-9]*  ]]
+if [[ ${#password} -gt 7 && "$password" == *[A-Z]* && "$password" == *[0-9]* && *[\!\@\#\%\*\&\$\=\-]*{1] ]]
 then
 echo "valid"
 else
