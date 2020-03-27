@@ -19,7 +19,10 @@ else
 fi
 
 email=""
-validEmail="^[a-zA-z0-9]{3,}+[@][a-zA-z0-9]{3,}+[.][a-ZA-Z]{3,}$"
+EmailPattern1="^[a-zA-z0-9]{3,}+[@]{1}"
+EmailPattern2="^[a-zA-z0-9]{3,}+[@]{1}[a-zA-z0-9]{3,}"
+EmailPattern3="^[a-zA-z0-9]{3,}+[@]{1}[a-zA-z0-9]{3,}+[.][a-ZA-Z]{2,4}$"
+validEmail="^[a-zA-z0-9]{3,}+[@][a-zA-z0-9]{3,}+[.][a-ZA-Z]{2,4}$"
 read -p "enter email"  email
 if [[ $email =~ $validEmail ]]
 then
