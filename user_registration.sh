@@ -28,3 +28,13 @@ else
 	echo "invalid"
 fi
 
+mobileNumber=""
+validNumber="^[0-9]{2} [0-9]{10}$"
+read -p "enter mobile number: " mobileNumber
+if [[ $mobileNumber =~ $validNumber ]]
+then
+   echo "valid"
+else
+   echo "invalid"
+fi
+
